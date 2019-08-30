@@ -1,0 +1,1942 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=748"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"/>
+    
+    <!--
+    <link rel="stylesheet" href="style.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    -->
+    
+    <apex:stylesheet value="{!URLFOR($Resource.GTAutoLab, 'style.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.GTAutoLab, 'styles.css')}"/>
+    
+    <script src="//cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <!-- <apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'signature_pad.min.js')}"/> -->
+    
+    <title>GT AUTOLAB - Credit Application</title>
+</head>
+<body class="credit">
+
+<!--personal-->
+
+<!-- <div class="popup-credit popup-personal popup"> -->
+<div class="popup-credit popup-personal">
+    <div class="success-wrap">
+        <div class="success">
+            <img width="100" src="/img/ok_green_icon.png" alt=""/>
+        </div>
+        <div class="success"><p>Thanks for you appeal!</p>
+            <p>Your request successfully submitted!</p>
+            <p>We will contact you shortly</p></div>
+    </div>
+    <div class="popup__top">
+        <h2>Personal application</h2>
+        <button class="modal-close" type="button">Close</button>
+    </div>
+    <ul class="popup__nav">
+        <li class="popup__pointer popup__pointer--active">
+            <p>Personal info</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Employment</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Co-app Info</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Co-Employment</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Review</p>
+        </li>
+        <li class="popup__pointer--end">
+            <p>Submit</p>
+        </li>
+    </ul>
+    <form action="#" method="POST" name="personal-application" class="Personal--wrapper" id="personal-info">
+        <!--1-->
+        <div class="form-container form-container--active form-check" id="personal-application_1_step">
+            <div id="personal-info" class="personal-info popup-body--wrapper">
+
+                <div class="form-row">
+                    <div class="input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Last Name" name="lastname"/>
+                                <!--<apex:inputText styleClass="input__text" html-placeholder="Last Name" id="lastname" value="{!Personal_Last_Name}" />-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Middle Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Middle Name" name="middlename"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="First Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="First Name" name="firstname"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-216 input--datepicker">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required, birthday"
+                             data-placeholder="Birthday">
+                            <div class="input__button">
+                                <input type="text" class="input__text datepicker-here datepicker-here--birthday"
+                                       placeholder="Birthday"
+                                       name="Birthday"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="SSN">
+                            <div class="input__button">
+                                <input type="text" class="ssn input__text" placeholder="SSN" name="SSN"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Zip" name="zip" id="zip_1"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Address">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Address" name="address"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Apt/Suite">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Apt/Suite" name="aptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="City" name="city" id="zip_1_city"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select name="state" id="zip_1_state">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Home Phone">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Home Phone" name="homephone"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Cell Phone">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Cell Phone" name="cellphone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Type of residence">
+                            <select name="typeofresidence">
+                                <option value="option-placeholder">Type of residence</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Mortgage">Mortgage</option>
+                                <option value="Own Outright">Own Outright</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select name="yearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Monthly payment">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Monthly payment"
+                                       name="monthlypayment"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="previousadress" style="display: none;">
+                    <p class="popup__text-label">Previous address information</p>
+                    <div class="form-row">
+
+                        <div class="w-337">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Address">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Address" name="prevaddress"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check=""
+                                 data-placeholder="Apt/Suite">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Apt/Suite" name="prevaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Zip" name="prevzip" id="zip_2"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select name="prevstate" id="zip_2_state">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="City" name="prevcity"
+                                           id="zip_2_city"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select name="prevyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+            </div>
+        </div>
+
+        <!--2-->
+        <div class="form-container form-check" id="personal-application_2_step">
+            <div id="employment" class="employment popup-body--wrapper">
+                <div class="form-row">
+                    <div class="w-452">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Employer Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Employer Name" name="employername"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Phone">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Phone" name="phone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Business address">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Business address"
+                                       name="businessaddress"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Suite">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Suite" name="emplaptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Zip" name="emplzip" id="zip_3"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select name="emplstate" id="zip_3_state">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="City" name="emplcity"
+                                       id="zip_3_city"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select name="emplyearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-127">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Position">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Position" name="position"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-163">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Gross Annual Income">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Gross Annual Income"
+                                       name="grossannualincome"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-127">
+                        <div class="input form-check__field-point form-check__field-income" data-check-type="input"
+                             data-check="input-required" data-natural-field="form-check__field-income-source-1"
+                             data-placeholder="Other income">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Other income" name="otherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216">
+                        <div class="input form-check__field-point form-check__field-income-source-1"
+                             data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Source of other income">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Source of other income"
+                                       name="sourceotherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="popup--label"><input type="checkbox" name="withcoapp" placeholder="withcoapp"/>
+                        Please check here if you would like to add a co-applicant to the current
+                        application.</label>
+                </div>
+                <div id="emplpreviousadress" style="display:none">
+                    <p class="popup__text-label">Previous Employer Info</p>
+                    <div class="form-row">
+                        <div class="w-452">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Employer Name">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Employer Name"
+                                           name="prevemployername"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Phone">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Phone" name="prevphone"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="w-337">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Business address">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Business address"
+                                           name="prevbusinessaddress"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Suite">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Suite" name="prevemplaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Zip" name="prevemplzip"
+                                           id="zip_4"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select name="prevemplstate" id="zip_4_state">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="City" name="prevemplcity"
+                                           id="zip_4_city"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select name="prevemplyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+        <!--3-->
+        <div class="form-container form-check" id="personal-application_3_step">
+            <div id="co-appinfo" class="co-appinfo popup-body--wrapper">
+                <div class="form-row">
+                    <div class="input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Last Name" name="colastname"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Middle Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Middle Name" name="comiddlename"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="First Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="First Name" name="cofirstname"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216 input--datepicker">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required, birthday"
+                             data-placeholder="Birthday">
+                            <div class="input__button">
+                                <input type="text" class="input__text datepicker-here datepicker-here--birthday"
+                                       placeholder="Birthday"
+                                       name="coBirthday"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="SSN">
+                            <div class="input__button">
+                                <input type="text" class="ssn input__text" placeholder="SSN" name="coSSN"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Zip" name="cozip" id="zip_5"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Address">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Address" name="coaddress"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Apt/Suite">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Apt/Suite" name="coaptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="City" name="cocity" id="zip_5_city"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select name="costate" id="zip_5_state">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Home Phone">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Home Phone" name="cohomephone"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Cell Phone">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Cell Phone" name="cocellphone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="select form-check__field form-check__field-point" data-check-type="select"
+                         data-check="select-required"
+                         data-placeholder="Type of residence">
+                        <select name="cotypeofresidence">
+                            <option value="option-placeholder">Type of residence</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Mortgage">Mortgage</option>
+                            <option value="Own Outright">Own Outright</option>
+                        </select>
+                    </div>
+
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select name="coyearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Monthly payment">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Monthly payment"
+                                       name="comonthlypayment"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copreviousadress" style="display: none;">
+                    <p class="popup__text-label">Previous address information</p>
+                    <div class="form-row">
+
+                        <div class="w-337">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Address">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Address" name="coprevaddress"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check=""
+                                 data-placeholder="Apt/Suite">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Apt/Suite"
+                                           name="coprevaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Zip" name="coprevzip"
+                                           id="zip_6"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select name="coprevstate" id="zip_6_state">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="City" name="coprevcity"
+                                           id="zip_6_city"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select name="coprevyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+        <!--4-->
+        <div class="form-container form-check" id="personal-application_4_step">
+            <div id="Co-employment" class="co-employment popup-body--wrapper">
+                <div class="form-row">
+                    <div class="w-452">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Employer Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Employer Name"
+                                       name="coemployername"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Phone">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Phone" name="cophone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Business address">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Business address"
+                                       name="cobusinessaddress"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Suite">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Suite" name="coemplaptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Zip" name="coemplzip" id="zip_7"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select name="coemplstate" id="zip_7_state">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="City" name="coemplcity"
+                                       id="zip_7_city"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select name="coemplyearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-127">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Position">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Position" name="coposition"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-163">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Gross Annual Income">
+                            <div class="input__button">
+                                <input type="text" class="income input__text" placeholder="Gross Annual Income"
+                                       name="cogrossannualincome"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="input-127">
+                        <div class="input form-check__field-income form-check__field-point" data-check-type="input"
+                             data-check="input-required" data-natural-field="form-check__field-income-source-2"
+                             data-placeholder="Other income">
+                            <div class="input__button">
+                                <input type="text" class="income input__text" placeholder="Other income"
+                                       name="cootherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216">
+                        <div class="input form-check__field form-check__field-point form-check__field-income-source-2"
+                             data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Source of other income">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Source of other income"
+                                       name="cosourceotherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="coemplprev" style="display:none">
+                    <p class="popup__text-label">Previous Employer Info</p>
+                    <div class="form-row">
+                        <div class="w-452">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Employer Name">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Employer Name"
+                                           name="coemplprevemployername"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Phone">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Phone" name="coemplprevphone"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="w-337">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Business address">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Business address"
+                                           name="coemplprevbusinessaddress"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Suite">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Suite"
+                                           name="coemplprevemplaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="Zip" name="coemplprevemplzip"
+                                           id="zip_8"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select name="coemplprevemplstate" id="zip_8_state">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input type="text" class="input__text" placeholder="City" name="coemplprevemplcity"
+                                           id="zip_8_city"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select name="coemplprevemplyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+        <!--5-->
+        <div class="form-container" id="personal-application_5_step">
+            <div id="review-personal"
+                 class="review-personal popup-body--wrapper baron baron__root baron__clipper _winxp"
+                 data-baron-v-id="1">
+                <div class="baron__scroller">
+                    <p><span class="review-info">Name:</span>
+                        <span class="review-info_personal">Gilmutdinov Salikh R</span>
+                    </p>
+                    <p><span class="review-info">Birthdate:</span>
+                        <span class="review-info_personal">11 / 01 /1995</span>
+                    </p>
+                    <p><span class="review-info">Personal Email:</span>
+                        <span class="review-info_personal">salikh@gmail.com</span>
+                    </p>
+                    <p><span class="review-info">Present address:</span>
+                        <span class="review-info_personal">23 Martin Luther King av.</span>
+                    </p>
+                    <p><span class="review-info">City:</span>
+                        <span class="review-info_personal">Morris Town</span>
+                    </p>
+                    <p><span class="review-info">State:</span>
+                        <span class="review-info_personal">New Jearsey</span>
+                    </p>
+                    <p><span class="review-info">Zip:</span>
+                        <span class="review-info_personal">07960</span>
+                    </p>
+                    <p><span class="review-info">YR:</span>
+                        <span class="review-info_personal">11</span>
+                    </p>
+                    <p><span class="review-info">Phone:</span>
+                        <span class="review-info_personal">989-708-2389.</span>
+                    </p>
+                    <p><span class="review-info">Previous address:</span>
+                        <span class="review-info_personal">36 Madison av.</span>
+                    </p>
+                    <p><span class="review-info">City:</span>
+                        <span class="review-info_personal">Madison</span>
+                    </p>
+                    <p><span class="review-info">State:</span>
+                        <span class="review-info_personal"> New Jearsey</span>
+                    </p>
+                    <p><span class="review-info">City:</span>
+                        <span class="review-info_personal">Madison</span>
+                    </p>
+                    <p><span class="review-info">Zip:</span>
+                        <span class="review-info_personal">07940</span>
+                    </p>
+                    <p><span class="review-info">Yrs:</span>
+                        <span class="review-info_personal">1</span>
+                    </p>
+                    <p><span class="review-info">Present Employer:</span>
+                        <span class="review-info_personal">Sunningdale Country Club</span>
+                    </p>
+                    <p><span class="review-info">Phone:</span>
+                        <span class="review-info_personal">914-821-5460</span>
+                    </p>
+                    <p><span class="review-info">Address:</span>
+                        <span class="review-info_personal">300 Underhill Rd, Scarsdale, NY 10583</span>
+                    </p>
+                    <p><span class="review-info">Position:</span>
+                        <span class="review-info_personal">Manager</span>
+                    </p>
+                    <p><span class="review-info">YRS:</span>
+                        <span class="review-info_personal">1 year</span>
+                    </p>
+                    <p><span class="review-info">Name of supervisor:</span>
+                        <span class="review-info_personal">Vincent Masco</span>
+                    </p>
+                    <p><span class="review-info">Present Gross Salary:</span>
+                        <span class="review-info_personal">$60 000</span>
+                    </p>
+                    <p><span class="review-info">Per:</span>
+                        <span class="review-info_personal">Year</span>
+                    </p>
+                    <p>
+                        <span class="review-info_personal">...</span>
+                    </p>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__bar"></div>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button class="popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back for edit</button>
+            </div>
+        </div>
+
+        <!--6-->
+        <div class="form-container form-check" id="personal-application_6_step">
+            <div id="submit-personal" class="submit popup-body--wrapper">
+                <div class="form-row">
+
+
+                    <div class="w-340">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Last Name" name="endlastname"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input--datepicker w-134">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Date">
+                            <div class="input__button">
+                                <input type="text" class="input__text datepicker-here" placeholder="Date"
+                                       name="datetimesign"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-69">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Initials">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Initials" name="endinitials"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" style="display: none;">
+                    <div class="w-340">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name of Co-Applicant">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Last Name of Co-Applicant"
+                                       name="endlastnameofcoapplicant"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input--datepicker w-134">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Date">
+                            <div class="input__button">
+                                <input type="text" class="input__text datepicker-here" placeholder="Date"
+                                       name="datetimesign1"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-69">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Initials">
+                            <div class="input__button">
+                                <input type="text" class="input__text" placeholder="Initials" name="endappinitials"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="form-row">
+                    <div class="popup--border">
+                        <h5>Terms and Conditions</h5>
+                        <p>
+                            Terms and Conditions Message
+                        </p>
+                    </div>
+                </div>
+                <!--                <label class="popup--label"><input type="checkbox" name="iagree" placeholder="iagree">-->
+                <!--                    I agree to the terms and conditions of service</label>-->
+                <div class="form-row">
+                    <div class="checkbox form-check__field form-check__field-point" data-check-type="input"
+                         data-check="checkbox-required">
+                        <div class="checkbox__item">
+                            <input class="checkbox__item-input" id="checkbox_1" name="iagree" value="checkbox_1"
+                                   type="checkbox"/>
+                            <label class="checkbox__item-label" for="checkbox_1">I agree to the terms and conditions of
+                                service</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="popup--wrapper">
+                    <canvas id="signature-pad" class="signature-pad signature-pad--personal" width="568"
+                            height="103"></canvas>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="submit" id="personal-submit">
+                    Submit
+                </button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+<!--business-->
+
+
+<!-- <script src="jquery-3.3.1.js"></script> -->
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'jquery-3.3.1.js')}"/>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- 
+<apex:stylesheet value="{!URLFOR($Resource.GTAutoLab, 'jquery-ui.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'jquery-ui.min.js')}"/> 
+-->
+
+<!--
+<script src="datepicker.js"></script>
+<script src="baron.js"></script>
+-->
+
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'datepicker.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'baron.js')}"/>
+
+<script>
+
+
+    var canvas = document.getElementById('signature-pad');
+    var canvas2 = document.getElementById('signature-pad2');
+
+    // Adjust canvas coordinate space taking into account pixel ratio,
+    // to make it look crisp on mobile devices.
+    // This also causes canvas to be cleared.
+    function resizeCanvas() {
+        // When zoomed out to less than 100%, for some very strange reason,
+        // some browsers report devicePixelRatio as less than 1
+        // and only part of the canvas is cleared then.
+        var ratio = Math.max(window.devicePixelRatio || 1, 1);
+        // canvas.width = canvas.offsetWidth * ratio;
+        // canvas.height = canvas.offsetHeight * ratio;
+//    canvas.getContext("2d").scale(ratio, ratio);
+    }
+
+    window.onresize = resizeCanvas;
+    resizeCanvas();
+
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(255, 255, 255)' // necessary for saving image as JPEG; can be removed is only saving as PNG or SVG
+    });
+
+    var signaturePad2 = new SignaturePad(canvas2, {
+        backgroundColor: 'rgb(255, 255, 255)' // necessary for saving image as JPEG; can be removed is only saving as PNG or SVG
+    });
+
+
+</script>
+
+<!--
+<script src="script.js"></script>
+<script src="inputs_script.js"></script>
+<script src="jquery.mask.js"></script>
+-->
+
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'script.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'inputs_script.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'jquery.mask.js')}"/>
+
+<script src="//unpkg.com/autonumeric"></script>
+
+<script>
+    var Overlay = document.querySelector(".popup-overlay");
+    var valueBTN = document.querySelectorAll(".block-sellcar__btn");
+    var valuePopup = document.querySelector(".value-popup");
+    var valueClose = valuePopup.querySelector(".modal-close");
+    if (valueBTN && valuePopup) {
+        for (var i = 0; i < valueBTN.length; i++) {
+            valueBTN[i].addEventListener("click", function (evt) {
+                evt.preventDefault();
+                valuePopup.classList.add("popup__show");
+                Overlay.classList.add("popup-overlay__show");
+            });
+        }
+
+        valueClose.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            valuePopup.classList.remove("popup__show");
+            Overlay.classList.remove("popup-overlay__show");
+        });
+
+        Overlay.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            valuePopup.classList.remove("popup__show");
+            Overlay.classList.remove("popup-overlay__show");
+        });
+    }
+</script>
+<script>
+    $("input[name*='phone']").each(function (i, el) {
+        $(el).mask('(000) 000-0000');
+    });
+    $('.datepicker-here').each(function (i, el) {
+        $(el).mask('00/00/0000');
+    });
+    $("input.ssn").each(function (i, el) {
+        $(el).mask('000-00-0000');
+    });
+    $(".popup-personal input[name*='payment'], input.income, .popup-personal input[name*='income']").each(function (i, el) {
+        var name = $(el).attr('name');
+        if (name.indexOf('source') === -1) {
+            new AutoNumeric(el, {
+                // new AutoNumeric('input[name*=' + name + ']', {
+                dotDecimalCharCommaSeparator: ',',
+                integerPos: 7,
+                integerNeg: 1,
+                currencySymbol: '$',
+                negativePositiveSignPlacement: 's'
+            });
+        }
+    });
+</script>
+<script>
+    $('.select-selected').each(function (i, el) {
+
+        el.addEventListener("focusout", function () {
+            // $(this).removeClass('select-arrow-active');
+            // $(this).next('.select-items').addClass('select-hide');
+            console.log($(this).text());
+        });
+
+        el.addEventListener("input", function () {
+            var entryCounts = [],
+                ths = $(this);
+
+            if (!ths.hasClass('select-arrow-active')) {
+                ths.addClass('select-arrow-active');
+                ths.parent().find('.select-items').removeClass('select-hide');
+            }
+
+            if (ths.text().length > 0 && ths.text() !== ths.parent().find('select').attr('placeholder')) {
+                ths.parent().find('.select-items div').each(function (q, opt) {
+                    var optionText = $(opt).text().toUpperCase(),
+                        // searchString = $(el).text(),
+                        searchString = $(el).text().toUpperCase();
+                    if (optionText.indexOf(searchString) === -1) {
+                        $(opt).hide();
+                        $(opt).removeClass('same-as-selected');
+                    } else {
+                        console.log(entryCounts);
+                        entryCounts.push($(opt).text());
+                        $(opt).show();
+                        $(opt).addClass('same-as-selected');
+                    }
+                });
+                if (entryCounts.length === 1) {
+                    ths.parent().find('.select-items').addClass('select-hide');
+                    ths.text(entryCounts[0]);
+                }
+            } else {
+                $(this).parent().find('.select-items').each(function (q, opt) {
+                    $(opt).show();
+                });
+            }
+        }, false);
+    });
+</script>
+</body>
+</html>  
+</apex:page>

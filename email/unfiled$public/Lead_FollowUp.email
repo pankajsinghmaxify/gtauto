@@ -1,0 +1,10 @@
+Dear {!User.FirstName},
+
+The following given lead has not updated from last Five days.  
+
+Lead Name:  {!Lead.Name}  
+Company:  {!Lead.Company} 
+
+Click on the link to access the lead directly: {!Lead.Link}
+
+Thanks!

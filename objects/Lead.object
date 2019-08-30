@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Convert</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Convert</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Convert</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FindDup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FindDup</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FindDup</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Lead_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>Leads_Custom_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Leads_Custom_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Rating</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <fields>Deal__c</fields>
+        <fields>Vehicle__c</fields>
+        <label>Leads Custom Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>Address</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>AnnualRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Balance2__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Balance2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Balance_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Balance__c), &quot;0&quot;, &quot;5&quot;)</formula>
+        <label>Balance Point</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Car_Condition_Image__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Car Condition Image</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Car_Urgency__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Car Urgency</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Car_notes__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter any notes regarding the existing vehicle</inlineHelpText>
+        <label>Car Notes</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>College_Rebate_Image__c</fullName>
+        <externalId>false</externalId>
+        <label>College Rebate Image</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>College_Rebate_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(College_Rebate__c, 
+&quot;True&quot;, &quot;10&quot;,
+&quot;False&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>College Rebate Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>College_Rebate__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>College Rebate</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>True</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>False</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Company</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Condition__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Condition</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Super clean (just a few scratches)</fullName>
+                    <default>false</default>
+                    <label>Super clean (just a few scratches)</label>
+                </value>
+                <value>
+                    <fullName>Somewhat clean (regular wear and tear)</fullName>
+                    <default>false</default>
+                    <label>Somewhat clean (regular wear and tear)</label>
+                </value>
+                <value>
+                    <fullName>Minor damages (a few dents and dings)</fullName>
+                    <default>false</default>
+                    <label>Minor damages (a few dents and dings)</label>
+                </value>
+                <value>
+                    <fullName>Major damages (some really BIG dents)</fullName>
+                    <default>false</default>
+                    <label>Major damages (some really BIG dents)</label>
+                </value>
+                <value>
+                    <fullName>Destroyed (oops)</fullName>
+                    <default>false</default>
+                    <label>Destroyed (oops)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Credit_Score_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Credit_Score__c, 
+&quot;Superior (720+)&quot;, &quot;25&quot;,
+&quot;Very Good (690-719)&quot;, &quot;20&quot;,
+&quot;Satisfactory (650-689)&quot;, &quot;10&quot;,
+&quot;Not Satisfactory (630-649)&quot;, &quot;8&quot;,
+&quot;Bad (610-629)&quot;, &quot;5&quot;,
+&quot;Very Bad (580-609)&quot;, &quot;0&quot;,
+&quot;No Credit (520-609)&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credit Score Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Score__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Credit Score</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Superior (720+)</fullName>
+                    <default>false</default>
+                    <label>Superior (720+)</label>
+                </value>
+                <value>
+                    <fullName>Very Good (690-719)</fullName>
+                    <default>false</default>
+                    <label>Very Good (690-719)</label>
+                </value>
+                <value>
+                    <fullName>Satisfactory (650-689)</fullName>
+                    <default>false</default>
+                    <label>Satisfactory (650-689)</label>
+                </value>
+                <value>
+                    <fullName>Not Satisfactory (630-649)</fullName>
+                    <default>false</default>
+                    <label>Not Satisfactory (630-649)</label>
+                </value>
+                <value>
+                    <fullName>Bad (610-629)</fullName>
+                    <default>false</default>
+                    <label>Bad (610-629)</label>
+                </value>
+                <value>
+                    <fullName>Very Bad (580-609)</fullName>
+                    <default>false</default>
+                    <label>Very Bad (580-609)</label>
+                </value>
+                <value>
+                    <fullName>No Credit (520-609)</fullName>
+                    <default>false</default>
+                    <label>No Credit (520-609)</label>
+                </value>
+                <value>
+                    <fullName>Don&apos;t know</fullName>
+                    <default>false</default>
+                    <label>Don&apos;t know</label>
+                </value>
+                <value>
+                    <fullName>Satisfactory</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Satisfactory (650-669)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deal2__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Buy a car</fullName>
+                    <default>false</default>
+                    <label>Buy a car</label>
+                </value>
+                <value>
+                    <fullName>Sell a car</fullName>
+                    <default>false</default>
+                    <label>Sell a car</label>
+                </value>
+                <value>
+                    <fullName>Lease a car</fullName>
+                    <default>false</default>
+                    <label>Lease a car</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deal3__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal3</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Buy a car</fullName>
+                    <default>false</default>
+                    <label>Buy a car</label>
+                </value>
+                <value>
+                    <fullName>Lease a car</fullName>
+                    <default>false</default>
+                    <label>Lease a car</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deal_Fees2__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deal Fees</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lower fees</fullName>
+                    <default>false</default>
+                    <label>Lower fees</label>
+                </value>
+                <value>
+                    <fullName>Lower payment</fullName>
+                    <default>false</default>
+                    <label>Lower payment</label>
+                </value>
+                <value>
+                    <fullName>All in</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>All in</label>
+                </value>
+                <value>
+                    <fullName>Down Payment</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Down Payment (Amount)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deal_Fees_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Deal_Fees2__c, 
+&quot;Lower payment&quot;, &quot;0&quot;,
+&quot;Lower fees&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deal Fees Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deal_Fees__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deal Fees</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard Fees</fullName>
+                    <default>false</default>
+                    <label>Standard Fees</label>
+                </value>
+                <value>
+                    <fullName>Lower Fees</fullName>
+                    <default>false</default>
+                    <label>Lower Fees</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deal__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deal</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Buy a car</fullName>
+                    <default>false</default>
+                    <label>Buy a car</label>
+                </value>
+                <value>
+                    <fullName>Sell a car</fullName>
+                    <default>false</default>
+                    <label>Sell a car</label>
+                </value>
+                <value>
+                    <fullName>Lease a car</fullName>
+                    <default>false</default>
+                    <label>Lease a car</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deal_miles_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Deal_miles__c, 
+&quot;5,000&quot;, &quot;0&quot;,
+&quot;7,500&quot;, &quot;0&quot;,
+&quot;10,000&quot;, &quot;0&quot;,
+&quot;12,000&quot;, &quot;0&quot;,
+&quot;15,000&quot;, &quot;0&quot;,
+&quot;Don’t know&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Deal miles Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deal_miles__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deal miles</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>5,000</fullName>
+                    <default>false</default>
+                    <label>5,000</label>
+                </value>
+                <value>
+                    <fullName>7,500</fullName>
+                    <default>false</default>
+                    <label>7,500</label>
+                </value>
+                <value>
+                    <fullName>10,000</fullName>
+                    <default>false</default>
+                    <label>10,000</label>
+                </value>
+                <value>
+                    <fullName>12,000</fullName>
+                    <default>false</default>
+                    <label>12,000</label>
+                </value>
+                <value>
+                    <fullName>15,000</fullName>
+                    <default>false</default>
+                    <label>15,000</label>
+                </value>
+                <value>
+                    <fullName>Don’t know</fullName>
+                    <default>false</default>
+                    <label>Don’t know</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Desired_Contract_Term_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Desired_Contract_Term__c, 
+&quot;24 months&quot;, &quot;0&quot;,
+&quot;36 months&quot;, &quot;0&quot;,
+&quot;39 months&quot;, &quot;0&quot;,
+&quot;42 months&quot;, &quot;0&quot;,
+&quot;45 months&quot;, &quot;0&quot;,
+&quot;48 months&quot;, &quot;0&quot;,
+&quot;60 months&quot;, &quot;0&quot;,
+&quot;72 months&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Desired Contract Term Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Desired_Contract_Term__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Desired Contract Term</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>24 months</fullName>
+                    <default>false</default>
+                    <label>24 months</label>
+                </value>
+                <value>
+                    <fullName>36 months</fullName>
+                    <default>false</default>
+                    <label>36 months</label>
+                </value>
+                <value>
+                    <fullName>39 months</fullName>
+                    <default>false</default>
+                    <label>39 months</label>
+                </value>
+                <value>
+                    <fullName>42 months</fullName>
+                    <default>false</default>
+                    <label>42 months</label>
+                </value>
+                <value>
+                    <fullName>45 months</fullName>
+                    <default>false</default>
+                    <label>45 months</label>
+                </value>
+                <value>
+                    <fullName>48 months</fullName>
+                    <default>false</default>
+                    <label>48 months</label>
+                </value>
+                <value>
+                    <fullName>60 months</fullName>
+                    <default>false</default>
+                    <label>60 months</label>
+                </value>
+                <value>
+                    <fullName>72 months</fullName>
+                    <default>false</default>
+                    <label>72 months</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Due_Date_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Car_Urgency__c, 
+&quot;5&quot;, &quot;20&quot;,
+&quot;4&quot;, &quot;10&quot;,
+&quot;3&quot;, &quot;5&quot;,
+&quot;2&quot;, &quot;3&quot;,
+&quot;1&quot;, &quot;3&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Due Date Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Email_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Email !=&apos;&apos;, &quot;0&quot;, &quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IndividualId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>LastTransferDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Value(College_Rebate_Points__c)+	
+Value(Credit_Score_Points__c)+
+Value(Balance_Points__c)+	
+Value(Year_Make_Model_VIN_Points__c)+	
+Value(Ownership_Points__c)+	
+Value(Desired_Contract_Term_Points__c)+	
+Value(Deal_Fees_Points__c)+	
+Value(Deal_miles_Points__c)+
+Value(Email_Points__c)+	
+Value(Due_Date_Points__c)+	
+Value(Trade_Points__c)+
+Value(Military_Rebate_Points__c)+
+Value(Name_Points__c)+
+Value(Phone_Point__c)+
+Value(Registration_Points__c)+
+(Maturity_Date_Points__c)</formula>
+        <label>Lead Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_or_Buy__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease or Buy</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Make__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Make</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( Maturity_Date__c -Today() &lt;= 7,10,
+if(Maturity_Date__c -Today()&gt;7 &amp;&amp; Maturity_Date__c -Today() &lt;= 14,5,
+if(Maturity_Date__c -Today()&gt;14 &amp;&amp; Maturity_Date__c -Today()&lt;30,3,0))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Maturity Date Points</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Military_Document_Image__c</fullName>
+        <externalId>false</externalId>
+        <label>Military Document Image</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Military_Rebate_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Military_Rebate__c, 
+&quot;True&quot;, &quot;10&quot;,
+&quot;False&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <label>Military Rebate Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Military_Rebate__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Military Rebate</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>True</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>False</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Model_trim__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Model trim</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Name_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( LastName  !=&apos;&apos;, &quot;0&quot;, &quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberOfEmployees</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ownership_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Ownership__c, 
+&quot;Lease&quot;, &quot;5&quot;, 
+&quot;Finance&quot;, &quot;5&quot;, 
+&quot;Own&quot;, &quot;5&quot;, 
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ownership Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ownership__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Ownership</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lease</fullName>
+                    <default>false</default>
+                    <label>Lease</label>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>Own</fullName>
+                    <default>false</default>
+                    <label>Own</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly payment</fullName>
+                    <default>false</default>
+                    <label>Monthly payment</label>
+                </value>
+                <value>
+                    <fullName>One-time payment</fullName>
+                    <default>false</default>
+                    <label>One-time payment</label>
+                </value>
+                <value>
+                    <fullName>Cash purchase</fullName>
+                    <default>false</default>
+                    <label>Cash purchase</label>
+                </value>
+                <value>
+                    <fullName>An auto loan through a financial institution</fullName>
+                    <default>false</default>
+                    <label>An auto loan through a financial institution</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Payment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>One-time</fullName>
+                    <default>false</default>
+                    <label>One-time</label>
+                </value>
+                <value>
+                    <fullName>Cash purchase</fullName>
+                    <default>false</default>
+                    <label>Cash purchase</label>
+                </value>
+                <value>
+                    <fullName>Car loan</fullName>
+                    <default>false</default>
+                    <label>Car loan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Phone_Point__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Phone !=&apos;&apos;, &quot;0&quot;, &quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone Point</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Referred_by2__c</fullName>
+        <externalId>false</externalId>
+        <label>Referred by2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referred_by__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referred by</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Registration_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Registration 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, it&apos;s time for an upgrade</fullName>
+                    <default>false</default>
+                    <label>Yes, it&apos;s time for an upgrade</label>
+                </value>
+                <value>
+                    <fullName>Yes, but I&apos;d like to get another one</fullName>
+                    <default>false</default>
+                    <label>Yes, but I&apos;d like to get another one</label>
+                </value>
+                <value>
+                    <fullName>No, not yet</fullName>
+                    <default>false</default>
+                    <label>No, not yet</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Registration_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Registration__c, 
+&quot;Transfer&quot;, &quot;0&quot;,
+&quot;Registered, new plates&quot;, &quot;0&quot;,
+&quot;New plates&quot;, &quot;0&quot;,
+&quot;0&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Registration Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Registration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Transfer</fullName>
+                    <default>false</default>
+                    <label>Transfer</label>
+                </value>
+                <value>
+                    <fullName>Registered, new plates</fullName>
+                    <default>false</default>
+                    <label>Registered, new plates</label>
+                </value>
+                <value>
+                    <fullName>New plates</fullName>
+                    <default>false</default>
+                    <label>New plates</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alabama</fullName>
+                    <default>false</default>
+                    <label>Alabama</label>
+                </value>
+                <value>
+                    <fullName>Alaska</fullName>
+                    <default>false</default>
+                    <label>Alaska</label>
+                </value>
+                <value>
+                    <fullName>Arizona</fullName>
+                    <default>false</default>
+                    <label>Arizona</label>
+                </value>
+                <value>
+                    <fullName>Arkansas</fullName>
+                    <default>false</default>
+                    <label>Arkansas</label>
+                </value>
+                <value>
+                    <fullName>California</fullName>
+                    <default>false</default>
+                    <label>California</label>
+                </value>
+                <value>
+                    <fullName>Colorado</fullName>
+                    <default>false</default>
+                    <label>Colorado</label>
+                </value>
+                <value>
+                    <fullName>Connecticut</fullName>
+                    <default>false</default>
+                    <label>Connecticut</label>
+                </value>
+                <value>
+                    <fullName>Delaware</fullName>
+                    <default>false</default>
+                    <label>Delaware</label>
+                </value>
+                <value>
+                    <fullName>Florida</fullName>
+                    <default>false</default>
+                    <label>Florida</label>
+                </value>
+                <value>
+                    <fullName>Georgia</fullName>
+                    <default>false</default>
+                    <label>Georgia</label>
+                </value>
+                <value>
+                    <fullName>Hawaii</fullName>
+                    <default>false</default>
+                    <label>Hawaii</label>
+                </value>
+                <value>
+                    <fullName>Idaho</fullName>
+                    <default>false</default>
+                    <label>Idaho</label>
+                </value>
+                <value>
+                    <fullName>Illinois</fullName>
+                    <default>false</default>
+                    <label>Illinois</label>
+                </value>
+                <value>
+                    <fullName>Indiana</fullName>
+                    <default>false</default>
+                    <label>Indiana</label>
+                </value>
+                <value>
+                    <fullName>Iowa</fullName>
+                    <default>false</default>
+                    <label>Iowa</label>
+                </value>
+                <value>
+                    <fullName>Kansas</fullName>
+                    <default>false</default>
+                    <label>Kansas</label>
+                </value>
+                <value>
+                    <fullName>Kentucky</fullName>
+                    <default>false</default>
+                    <label>Kentucky</label>
+                </value>
+                <value>
+                    <fullName>Louisiana</fullName>
+                    <default>false</default>
+                    <label>Louisiana</label>
+                </value>
+                <value>
+                    <fullName>Maine</fullName>
+                    <default>false</default>
+                    <label>Maine</label>
+                </value>
+                <value>
+                    <fullName>Maryland</fullName>
+                    <default>false</default>
+                    <label>Maryland</label>
+                </value>
+                <value>
+                    <fullName>Massachusetts</fullName>
+                    <default>false</default>
+                    <label>Massachusetts</label>
+                </value>
+                <value>
+                    <fullName>Michigan</fullName>
+                    <default>false</default>
+                    <label>Michigan</label>
+                </value>
+                <value>
+                    <fullName>Minnesota</fullName>
+                    <default>false</default>
+                    <label>Minnesota</label>
+                </value>
+                <value>
+                    <fullName>Mississippi</fullName>
+                    <default>false</default>
+                    <label>Mississippi</label>
+                </value>
+                <value>
+                    <fullName>Missouri</fullName>
+                    <default>false</default>
+                    <label>Missouri</label>
+                </value>
+                <value>
+                    <fullName>Montana</fullName>
+                    <default>false</default>
+                    <label>Montana</label>
+                </value>
+                <value>
+                    <fullName>Nebraska</fullName>
+                    <default>false</default>
+                    <label>Nebraska</label>
+                </value>
+                <value>
+                    <fullName>Nevada</fullName>
+                    <default>false</default>
+                    <label>Nevada</label>
+                </value>
+                <value>
+                    <fullName>New Hampshire</fullName>
+                    <default>false</default>
+                    <label>New Hampshire</label>
+                </value>
+                <value>
+                    <fullName>New Jersey</fullName>
+                    <default>false</default>
+                    <label>New Jersey</label>
+                </value>
+                <value>
+                    <fullName>New Mexico</fullName>
+                    <default>false</default>
+                    <label>New Mexico</label>
+                </value>
+                <value>
+                    <fullName>New York</fullName>
+                    <default>false</default>
+                    <label>New York</label>
+                </value>
+                <value>
+                    <fullName>North Carolina</fullName>
+                    <default>false</default>
+                    <label>North Carolina</label>
+                </value>
+                <value>
+                    <fullName>North Dakota</fullName>
+                    <default>false</default>
+                    <label>North Dakota</label>
+                </value>
+                <value>
+                    <fullName>Ohio</fullName>
+                    <default>false</default>
+                    <label>Ohio</label>
+                </value>
+                <value>
+                    <fullName>Oklahoma</fullName>
+                    <default>false</default>
+                    <label>Oklahoma</label>
+                </value>
+                <value>
+                    <fullName>Oregon</fullName>
+                    <default>false</default>
+                    <label>Oregon</label>
+                </value>
+                <value>
+                    <fullName>Pennsylvania</fullName>
+                    <default>false</default>
+                    <label>Pennsylvania</label>
+                </value>
+                <value>
+                    <fullName>Rhode Island</fullName>
+                    <default>false</default>
+                    <label>Rhode Island</label>
+                </value>
+                <value>
+                    <fullName>South Carolina</fullName>
+                    <default>false</default>
+                    <label>South Carolina</label>
+                </value>
+                <value>
+                    <fullName>South Dakota</fullName>
+                    <default>false</default>
+                    <label>South Dakota</label>
+                </value>
+                <value>
+                    <fullName>Tennessee</fullName>
+                    <default>false</default>
+                    <label>Tennessee</label>
+                </value>
+                <value>
+                    <fullName>Texas</fullName>
+                    <default>false</default>
+                    <label>Texas</label>
+                </value>
+                <value>
+                    <fullName>Utah</fullName>
+                    <default>false</default>
+                    <label>Utah</label>
+                </value>
+                <value>
+                    <fullName>Vermont</fullName>
+                    <default>false</default>
+                    <label>Vermont</label>
+                </value>
+                <value>
+                    <fullName>Virginia</fullName>
+                    <default>false</default>
+                    <label>Virginia</label>
+                </value>
+                <value>
+                    <fullName>Washington</fullName>
+                    <default>false</default>
+                    <label>Washington</label>
+                </value>
+                <value>
+                    <fullName>West Virginia</fullName>
+                    <default>false</default>
+                    <label>West Virginia</label>
+                </value>
+                <value>
+                    <fullName>Wisconsin</fullName>
+                    <default>false</default>
+                    <label>Wisconsin</label>
+                </value>
+                <value>
+                    <fullName>Wyoming</fullName>
+                    <default>false</default>
+                    <label>Wyoming</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Trade3__c</fullName>
+        <externalId>false</externalId>
+        <label>Trade3</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, it&apos;s time for an upgrade</fullName>
+                    <default>false</default>
+                    <label>Yes, it&apos;s time for an upgrade</label>
+                </value>
+                <value>
+                    <fullName>Yes, but I&apos;d like to get another one</fullName>
+                    <default>false</default>
+                    <label>Yes, but I&apos;d like to get another one</label>
+                </value>
+                <value>
+                    <fullName>No, not yet</fullName>
+                    <default>false</default>
+                    <label>No, not yet</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Trade_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Trade 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes, I&apos;d like to trade-in my car!</fullName>
+                    <default>false</default>
+                    <label>Yes, I&apos;d like to trade-in my car!</label>
+                </value>
+                <value>
+                    <fullName>Nope, I just want to sell it!</fullName>
+                    <default>false</default>
+                    <label>Nope, I just want to sell it!</label>
+                </value>
+                <value>
+                    <fullName>(Cash Purchase) No Trade-in against Lease</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>(Cash Purchase) No Trade-in against Lease</label>
+                </value>
+                <value>
+                    <fullName>No, not yet</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>No, not yet</label>
+                </value>
+                <value>
+                    <fullName>Sell for cash</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Sell for cash</label>
+                </value>
+                <value>
+                    <fullName>Yes, but I&apos;d like to get another one!</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Yes, but I&apos;d like to get another one</label>
+                </value>
+                <value>
+                    <fullName>Yes, it&apos;s time for an upgrade</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Yes, it&apos;s time for an upgrade</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Trade_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Trade__c, 
+&quot;Yes&quot;, &quot;5&quot;, 
+&quot;No&quot;, &quot;0&quot;, 
+&quot;Sell&quot;, &quot;80&quot;,
+&quot;Possible Trade&quot;, &quot;10&quot;, 
+&quot;0&quot;)</formula>
+        <label>Trade Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trade__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Please check MMR and CarFax</inlineHelpText>
+        <label>Trade</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Sell</fullName>
+                    <default>false</default>
+                    <label>Sell</label>
+                </value>
+                <value>
+                    <fullName>Possible Trade</fullName>
+                    <default>false</default>
+                    <label>Possible Trade</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Vehicle__c</fullName>
+        <defaultValue>&quot;None&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Vehicle</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Website</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Year_Make_Model_VIN_Points__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Year_Make_Model_VIN__c =&apos;&apos;, &quot;0&quot;, &quot;5&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year, Make, Model, VIN Points</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year_Make_Model_VIN__c</fullName>
+        <externalId>false</externalId>
+        <label>Year, Make, Model, VIN</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <searchLayouts>
+        <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.COMPANY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.PHONE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Deal__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LEAD.COMPANY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.COMPANY</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.MOBILE_PHONE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.COMPANY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.MOBILE_PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWriteTransfer</sharingModel>
+    <validationRules>
+        <fullName>Current_car_contract_unpaid_balance</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND (
+OR (
+ISPICKVAL(Ownership__c, &quot;Lease&quot;),
+ISPICKVAL(Ownership__c, &quot;Finance&quot;),
+
+ISPICKVAL(Balance2__c,&apos;&apos;)
+   ))</errorConditionFormula>
+        <errorDisplayField>Balance2__c</errorDisplayField>
+        <errorMessage>Please select Current car contract unpaid balance</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Current_car_information</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND (
+   ISPICKVAL (Year_Make_Model_VIN__c, &quot;Have a car&quot;), 
+   OR(
+   ISBLANK(Make__c),
+   ISBLANK(Model_trim__c),
+   ISBLANK(Car_notes__c)
+))</errorConditionFormula>
+        <errorDisplayField>Car_notes__c</errorDisplayField>
+        <errorMessage>Please fill VIN or Year, Make and Model trim fields</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Current_car_ownership</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND ( 
+	OR ( 
+		ISPICKVAL(Ownership__c, &quot;Lease&quot;), 
+		ISPICKVAL(Ownership__c, &quot;Finance&quot;)),
+		or(
+		ISBLANK(Maturity_Date__c), 
+		ISBLANK(Text(Balance2__c)) 
+	)
+)</errorConditionFormula>
+        <errorDisplayField>Maturity_Date__c</errorDisplayField>
+        <errorMessage>Please select contract end date &amp; Current car contract unpaid balance</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+</CustomObject>

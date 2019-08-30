@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Site_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Site Url</shortDescription>
+        <value>http://gtdev-gtauto-creditapplication.cs23.force.com</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,8 @@
+Dear {!Opportunity.Account}
+
+Please fill the GT Auto credit form, click on given below link:
+
+http://gtdev-gtauto-creditapplication.cs23.force.com/PersonalApplication_latest?accRecId={!Opportunity.AccountId}
+
+Regards, 
+{!User.FirstName}

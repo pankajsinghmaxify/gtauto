@@ -1,0 +1,2190 @@
+<apex:page controller="CreditApplicationCtrl" sidebar="false" showHeader="false" standardStylesheets="false">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=748"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"/>
+    <apex:stylesheet value="{!URLFOR($Resource.GTAutoLab, 'style.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.GTAutoLab, 'styles.css')}"/>
+    <script src="//cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <title>GT AUTOLAB - Personal Credit Application</title>
+</head>
+    <div id="display" class="success-wrap">
+        
+        <div class="success"><h1>Thanks for you appeal!</h1>
+            <h1>Your request successfully submitted!</h1>
+            <h1>We will contact you shortly</h1></div>
+    </div>
+
+<body class="credit" style="background-color:black;">
+
+<!--personal-->
+<!-- <div class="popup-credit popup-personal popup"> -->
+<div class="popup-credit popup-personal" id="hide">
+    
+    <div class="popup__top">
+        <h2>Personal Application</h2>
+        <!--<button class="modal-close" type="button">Close</button>-->
+    </div>
+    <ul class="popup__nav">
+        <li class="popup__pointer popup__pointer--active">
+            <p>Personal info</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Employment</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Co-app Info</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Co-Employment</p>
+        </li>
+        <li class="popup__pointer">
+            <p>Review</p>
+        </li>
+        <li class="popup__pointer--end">
+            <p>Submit</p>
+        </li>
+    </ul>
+    <form action="#" method="POST" name="personal-application" class="Personal--wrapper" id="personal-info">
+        <!--1-->
+        <div class="form-container form-container--active form-check" id="personal-application_1_step">
+            <div id="personal-info" class="personal-info popup-body--wrapper">
+
+                <div class="form-row">
+                    <div class="input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name">
+                            <div class="input__button">
+                                <input id="PersonalLastNameId" type="text" class="input__text" placeholder="Last Name" name="lastname"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Middle Name">
+                            <div class="input__button">
+                                <input id="PersonalMiddleNameId" type="text" class="input__text" placeholder="Middle Name" name="middlename"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="First Name">
+                            <div class="input__button">
+                                <input id="PersonalFirstNameId" type="text" class="input__text" placeholder="First Name" name="firstname"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-216 input--datepicker">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required, birthday"
+                             data-placeholder="Birthday">
+                            <div class="input__button">
+                                <input id="PersonalBirthdayId" type="text" class="input__text datepicker-here datepicker-here--birthday"
+                                       placeholder="Birthday"
+                                       name="Birthday"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="SSN">
+                            <div class="input__button">
+                                <input id="PersonalSSNId" type="text" class="ssn input__text" placeholder="SSN" name="SSN"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input id="PersonalZipId" type="text" class="input__text" placeholder="Zip" name="zip"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Address">
+                            <div class="input__button">
+                                <input id="PersonalAddressId" type="text" class="input__text" placeholder="Address" name="address"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Apt/Suite">
+                            <div class="input__button">
+                                <input id="PersonalAptsuiteId" type="text" class="input__text" placeholder="Apt/Suite" name="aptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input id="PersonalCityId" type="text" class="input__text" placeholder="City" name="city" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select id="PersonalStateId" name="state">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Home Phone">
+                            <div class="input__button">
+                                <input id="PersonalHomePhoneId" type="text" class="input__text" placeholder="Home Phone" name="homephone"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Cell Phone">
+                            <div class="input__button">
+                                <input id="PersonalCellPhoneId" type="text" class="input__text" placeholder="Cell Phone" name="cellphone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Type of residence">
+                            <select id="PersonalTypeOfResidenceId" name="typeofresidence">
+                                <option value="option-placeholder">Type of residence</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Mortgage">Mortgage</option>
+                                <option value="Own Outright">Own Outright</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select id="PersonalYearsAtAddressId" name="yearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Monthly payment">
+                            <div class="input__button">
+                                <input id="PersonalMonthlyPaymentId" type="text" class="input__text" placeholder="Monthly payment" name="monthlypayment"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="previousadress" style="display: none;">
+                    <p class="popup__text-label">Previous address information</p>
+                    <div class="form-row">
+
+                        <div class="w-337">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Address">
+                                <div class="input__button">
+                                    <input id="PersonalPreviousAddressId" type="text" class="input__text" placeholder="Address" name="prevaddress"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check=""
+                                 data-placeholder="Apt/Suite">
+                                <div class="input__button">
+                                    <input id="PersonalPreviousAptSuiteId" type="text" class="input__text" placeholder="Apt/Suite" name="prevaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input id="PersonalPreviousZipId" type="text" class="input__text" placeholder="Zip" name="prevzip"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select id="PersonalPreviousStateId" name="prevstate">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input id="PersonalPreviousCityId" type="text" class="input__text" placeholder="City" name="prevcity"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select id="PersonalPreviousYearsAtAddressId" name="prevyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+            </div>
+        </div>
+
+        <!--2-->
+        <div class="form-container form-check" id="personal-application_2_step">
+            <div id="employment" class="employment popup-body--wrapper">
+                <div class="form-row">
+                    <div class="w-452">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Employer Name">
+                            <div class="input__button">
+                                <input id="EmployerNameId" type="text" class="input__text" placeholder="Employer Name" name="employername"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Phone">
+                            <div class="input__button">
+                                <input id="EmployerPhoneId" type="text" class="input__text" placeholder="Phone" name="phone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Business address">
+                            <div class="input__button">
+                                <input id="BusinessAddressId" type="text" class="input__text" placeholder="Business address"
+                                       name="businessaddress"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Suite">
+                            <div class="input__button">
+                                <input id="EmployerSuiteId" type="text" class="input__text" placeholder="Suite" name="emplaptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input id="EmployerZipId" type="text" class="input__text" placeholder="Zip" name="emplzip"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select id="EmployerStateId" name="emplstate">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input id="EmployerCityId" type="text" class="input__text" placeholder="City" name="emplcity"
+                                       />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select id="EmployerYearsAtAddressId" name="emplyearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-127">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Position">
+                            <div class="input__button">
+                                <input id="EmployerPositionId" type="text" class="input__text" placeholder="Position" name="position"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-163">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Gross Annual Income">
+                            <div class="input__button">
+                                <input id="EmployerGrossAnnualIncomeId" type="text" class="input__text" placeholder="Gross Annual Income" name="grossannualincome"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-127">
+                        <div class="input form-check__field-point form-check__field-income" data-check-type="input"
+                             data-check="input-required" data-natural-field="form-check__field-income-source-1"
+                             data-placeholder="Other income">
+                            <div class="input__button">
+                                <input id="EmployerOtherIncomeId" type="text" class="input__text" placeholder="Other income" name="otherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216">
+                        <div class="input form-check__field-point form-check__field-income-source-1"
+                             data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Source of other income">
+                            <div class="input__button">
+                                <input id="EmployerSourceOfOtherIncomeId" type="text" class="input__text" placeholder="Source of other income" name="sourceotherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="popup--label"><input id="withcoappId" type="checkbox" name="withcoapp" placeholder="withcoapp"/>
+                        Please check here if you would like to a co-applicant to the current
+                        application.</label>
+                </div>
+                <div id="emplpreviousadress" style="display:none">
+                    <p class="popup__text-label">Previous Employer Info</p>
+                    <div class="form-row">
+                        <div class="w-452">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Employer Name">
+                                <div class="input__button">
+                                    <input id="PreviousEmployerNameId" type="text" class="input__text" placeholder="Employer Name" name="prevemployername"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Phone">
+                                <div class="input__button">
+                                    <input id="PreviousEmployerPhoneId" type="text" class="input__text" placeholder="Phone" name="prevphone"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="w-337">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Business address">
+                                <div class="input__button">
+                                    <input id="PreviousEmployerBusinessAddressId" type="text" class="input__text" placeholder="Business address" name="prevbusinessaddress"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Suite">
+                                <div class="input__button">
+                                    <input id="PreviousEmployerSuiteId" type="text" class="input__text" placeholder="Suite" name="prevemplaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input id="PreviousEmployerZipId" type="text" class="input__text" placeholder="Zip" name="prevemplzip"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select id="PreviousEmployerStateId" name="prevemplstate">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input id="PreviousEmployerCityId" type="text" class="input__text" placeholder="City" name="prevemplcity"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select id="PreviousEmployerYearsAtAddressId" name="prevemplyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+        <!--3-->
+        <div class="form-container form-check" id="personal-application_3_step">
+            <div id="co-appinfo" class="co-appinfo popup-body--wrapper">
+                <div class="form-row">
+                    <div class="input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name">
+                            <div class="input__button">
+                                <input id="CoAppLastNameId" type="text" class="input__text" placeholder="Last Name" name="colastname"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Middle Name">
+                            <div class="input__button">
+                                <input id="CoAppMiddleNameId" type="text" class="input__text" placeholder="Middle Name" name="comiddlename"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="First Name">
+                            <div class="input__button">
+                                <input id="CoAppFirstNameId" type="text" class="input__text" placeholder="First Name" name="cofirstname"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216 input--datepicker">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required, birthday"
+                             data-placeholder="Birthday">
+                            <div class="input__button">
+                                <input id="CoAppBirthdayId" type="text" class="input__text datepicker-here datepicker-here--birthday" placeholder="Birthday" name="coBirthday"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="SSN">
+                            <div class="input__button">
+                                <input id="CoAppSSNId" type="text" class="ssn input__text" placeholder="SSN" name="coSSN"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input id="CoAppZipId" type="text" class="input__text" placeholder="Zip" name="cozip"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Address">
+                            <div class="input__button">
+                                <input id="CoAppAddressId" type="text" class="input__text" placeholder="Address" name="coaddress"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check=""
+                             data-placeholder="Apt/Suite">
+                            <div class="input__button">
+                                <input id="CoAppAptSuiteId" type="text" class="input__text" placeholder="Apt/Suite" name="coaptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input id="CoAppCityId" type="text" class="input__text" placeholder="City" name="cocity"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select id="CoAppStateId" name="costate">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Home Phone">
+                            <div class="input__button">
+                                <input id="CoAppHomePhoneId" type="text" class="input__text" placeholder="Home Phone" name="cohomephone"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Cell Phone">
+                            <div class="input__button">
+                                <input id="CoAppCellPhoneId" type="text" class="input__text" placeholder="Cell Phone" name="cocellphone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="select form-check__field form-check__field-point" data-check-type="select"
+                         data-check="select-required"
+                         data-placeholder="Type of residence">
+                        <select id="CoAppTypeOfResidenceId" name="cotypeofresidence">
+                            <option value="option-placeholder">Type of residence</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Mortgage">Mortgage</option>
+                            <option value="Own Outright">Own Outright</option>
+                        </select>
+                    </div>
+
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select id="CoAppYearsAtAddressId" name="coyearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Monthly payment">
+                            <div class="input__button">
+                                <input id="CoAppMonthlyPaymentId" type="text" class="input__text" placeholder="Monthly payment" name="comonthlypayment"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copreviousadress" style="display: none;">
+                    <p class="popup__text-label">Previous address information</p>
+                    <div class="form-row">
+
+                        <div class="w-337">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Address">
+                                <div class="input__button">
+                                    <input id="CoAppPreviousAddressId" type="text" class="input__text" placeholder="Address" name="coprevaddress"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check=""
+                                 data-placeholder="Apt/Suite">
+                                <div class="input__button">
+                                    <input id="CoAppPreviousAptSuiteId" type="text" class="input__text" placeholder="Apt/Suite" name="coprevaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input id="CoAppPreviousZipId" type="text" class="input__text" placeholder="Zip" name="coprevzip"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select id="CoAppPreviousStateId" name="coprevstate">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input id="CoAppPreviousCityId" type="text" class="input__text" placeholder="City" name="coprevcity"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select id="CoAppPreviousYearsAtAddressId" name="coprevyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+        <!--4-->
+        <div class="form-container form-check" id="personal-application_4_step">
+            <div id="Co-employment" class="co-employment popup-body--wrapper">
+                <div class="form-row">
+                    <div class="w-452">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Employer Name">
+                            <div class="input__button">
+                                <input id="CoEmploymentEmployerNameId" type="text" class="input__text" placeholder="Employer Name" name="coemployername"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Phone">
+                            <div class="input__button">
+                                <input id="CoEmploymentPhoneId" type="text" class="input__text" placeholder="Phone" name="cophone"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="w-337">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Business address">
+                            <div class="input__button">
+                                <input id="CoEmploymentBusinessAddressId" type="text" class="input__text" placeholder="Business address" name="cobusinessaddress"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-16 w-95">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Suite">
+                            <div class="input__button">
+                                <input id="CoEmploymentSuiteId" type="text" class="input__text" placeholder="Suite" name="coemplaptsuite"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216 ml-16">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Zip">
+                            <div class="input__button">
+                                <input id="CoEmploymentZipId" type="text" class="input__text" placeholder="Zip" name="coemplzip"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-216">
+
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="State">
+                            <select id="CoEmploymentStateId" name="coemplstate">
+                                <option value="option-placeholder">State</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Armed Forces">Armed Forces</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="District of Columbia">District of Columbia</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Micronesia">Micronesia</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="New York">New York</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Palau">Palau</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Washington">Washington</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="ml-16 input-216">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="City">
+                            <div class="input__button">
+                                <input id="CoEmploymentCityId" type="text" class="input__text" placeholder="City" name="coemplcity"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216  ml-16">
+                        <div class="select form-check__field form-check__field-point" data-check-type="select"
+                             data-check="select-required"
+                             data-placeholder="Years at address">
+                            <select id="CoEmploymentYearsAtAddressId" name="coemplyearsataddress">
+                                <option value="option-placeholder">Years at address</option>
+                                <option value="0 years">0 years</option>
+                                <option value="1 year">1 year</option>
+                                <option value="2 years">2 years</option>
+                                <option value="3 years">3 years</option>
+                                <option value="4 years">4 years</option>
+                                <option value="5 years">5 years</option>
+                                <option value="6 years">6 years</option>
+                                <option value="7 years">7 years</option>
+                                <option value="8 years">8 years</option>
+                                <option value="9 years">9 years</option>
+                                <option value="10 years">10 years</option>
+                                <option value="More then 10 years">More then 10 years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-127">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Position">
+                            <div class="input__button">
+                                <input id="CoEmploymentPositionId" type="text" class="input__text" placeholder="Position" name="coposition"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-163">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Gross Annual Income">
+                            <div class="input__button">
+                                <input id="CoEmploymentGrossAnnualIncomeId" type="text" class="income input__text" placeholder="Gross Annual Income" name="cogrossannualincome"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-127">
+                        <div class="input form-check__field-income form-check__field-point" data-check-type="input"
+                             data-check="input-required" data-natural-field="form-check__field-income-source-2"
+                             data-placeholder="Other income">
+                            <div class="input__button">
+                                <input id="CoEmploymentOtherIncomeId" type="text" class="income input__text" placeholder="Other income" name="cootherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-216">
+                        <div class="input form-check__field form-check__field-point form-check__field-income-source-2"
+                             data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Source of other income">
+                            <div class="input__button">
+                                <input id="CoEmploymentSourceOfOtherIncomeId" type="text" class="input__text" placeholder="Source of other income" name="cosourceotherincome"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="coemplprev" style="display:none">
+                    <p class="popup__text-label">Previous Employer Info</p>
+                    <div class="form-row">
+                        <div class="w-452">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Employer Name">
+                                <div class="input__button">
+                                    <input id="CoEmploymentPreviousEmployerNameId" type="text" class="input__text" placeholder="Employer Name" name="coemplprevemployername"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Phone">
+                                <div class="input__button">
+                                    <input id="CoEmploymentPreviousPhoneId" type="text" class="input__text" placeholder="Phone" name="coemplprevphone"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="w-337">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Business address">
+                                <div class="input__button">
+                                    <input id="CoEmploymentPreviousBusinessAddressId" type="text" class="input__text" placeholder="Business address" name="coemplprevbusinessaddress"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-16 w-95">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Suite">
+                                <div class="input__button">
+                                    <input id="CoEmploymentPreviousSuiteId" type="text" class="input__text" placeholder="Suite" name="coemplprevemplaptsuite"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216 ml-16">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="Zip">
+                                <div class="input__button">
+                                    <input id="CoEmploymentPreviousZipId" type="text" class="input__text" placeholder="Zip" name="coemplprevemplzip"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-216">
+
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="State">
+                                <select id="CoEmploymentPreviousStateId" name="coemplprevemplstate">
+                                    <option value="option-placeholder">State</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Armed Forces">Armed Forces</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="United States Virgin Islands">United States Virgin Islands</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="ml-16 input-216">
+                            <div class="input form-check__field form-check__field-point" data-check-type="input"
+                                 data-check="input-required"
+                                 data-placeholder="City">
+                                <div class="input__button">
+                                    <input id="CoEmploymentPreviousCityId" type="text" class="input__text" placeholder="City" name="coemplprevemplcity"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-216  ml-16">
+                            <div class="select form-check__field form-check__field-point" data-check-type="select"
+                                 data-check="select-required"
+                                 data-placeholder="Years at address">
+                                <select id="CoEmploymentPreviousYearsAtAddressId" name="coemplprevemplyearsataddress">
+                                    <option value="option-placeholder">Years at address</option>
+                                    <option value="0 years">0 years</option>
+                                    <option value="1 year">1 year</option>
+                                    <option value="2 years">2 years</option>
+                                    <option value="3 years">3 years</option>
+                                    <option value="4 years">4 years</option>
+                                    <option value="5 years">5 years</option>
+                                    <option value="6 years">6 years</option>
+                                    <option value="7 years">7 years</option>
+                                    <option value="8 years">8 years</option>
+                                    <option value="9 years">9 years</option>
+                                    <option value="10 years">10 years</option>
+                                    <option value="More then 10 years">More then 10 years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="form-check__button popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+        <!--5-->
+        <div class="form-container" id="personal-application_5_step">
+            <div id="review-personal"
+                 class="review-personal popup-body--wrapper baron baron__root baron__clipper _winxp"
+                 data-baron-v-id="1">
+                <div class="baron__scroller">
+                    <p><span class="review-info">Name:</span>
+                        <span class="review-info_personal">Gilmutdinov Salikh R</span>
+                    </p>
+                    <p><span class="review-info">Birthdate:</span>
+                        <span class="review-info_personal">11 / 01 /1995</span>
+                    </p>
+                    <p><span class="review-info">Personal Email:</span>
+                        <span class="review-info_personal">salikh@gmail.com</span>
+                    </p>
+                    <p><span class="review-info">Present address:</span>
+                        <span class="review-info_personal">23 Martin Luther King av.</span>
+                    </p>
+                    <p><span class="review-info">City:</span>
+                        <span class="review-info_personal">Morris Town</span>
+                    </p>
+                    <p><span class="review-info">State:</span>
+                        <span class="review-info_personal">New Jearsey</span>
+                    </p>
+                    <p><span class="review-info">Zip:</span>
+                        <span class="review-info_personal">07960</span>
+                    </p>
+                    <p><span class="review-info">YR:</span>
+                        <span class="review-info_personal">11</span>
+                    </p>
+                    <p><span class="review-info">Phone:</span>
+                        <span class="review-info_personal">989-708-2389.</span>
+                    </p>
+                    <p><span class="review-info">Previous address:</span>
+                        <span class="review-info_personal">36 Madison av.</span>
+                    </p>
+                    <p><span class="review-info">City:</span>
+                        <span class="review-info_personal">Madison</span>
+                    </p>
+                    <p><span class="review-info">State:</span>
+                        <span class="review-info_personal"> New Jearsey</span>
+                    </p>
+                    <p><span class="review-info">City:</span>
+                        <span class="review-info_personal">Madison</span>
+                    </p>
+                    <p><span class="review-info">Zip:</span>
+                        <span class="review-info_personal">07940</span>
+                    </p>
+                    <p><span class="review-info">Yrs:</span>
+                        <span class="review-info_personal">1</span>
+                    </p>
+                    <p><span class="review-info">Present Employer:</span>
+                        <span class="review-info_personal">Sunningdale Country Club</span>
+                    </p>
+                    <p><span class="review-info">Phone:</span>
+                        <span class="review-info_personal">914-821-5460</span>
+                    </p>
+                    <p><span class="review-info">Address:</span>
+                        <span class="review-info_personal">300 Underhill Rd, Scarsdale, NY 10583</span>
+                    </p>
+                    <p><span class="review-info">Position:</span>
+                        <span class="review-info_personal">Manager</span>
+                    </p>
+                    <p><span class="review-info">YRS:</span>
+                        <span class="review-info_personal">1 year</span>
+                    </p>
+                    <p><span class="review-info">Name of supervisor:</span>
+                        <span class="review-info_personal">Vincent Masco</span>
+                    </p>
+                    <p><span class="review-info">Present Gross Salary:</span>
+                        <span class="review-info_personal">$60 000</span>
+                    </p>
+                    <p><span class="review-info">Per:</span>
+                        <span class="review-info_personal">Year</span>
+                    </p>
+                    <p>
+                        <span class="review-info_personal">...</span>
+                    </p>
+                </div>
+                <div class="baron__track">
+                    <div class="baron__bar"></div>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button class="popup__btn businessStep--next" type="button">Next</button>
+                <button class="popup__btn businessStep--prev" type="button">Back for edit</button>
+            </div>
+        </div>
+
+        <!--6-->
+        <div class="form-container form-check" id="personal-application_6_step">
+            <div id="submit-personal" class="submit popup-body--wrapper">
+                <div class="form-row">
+
+                    <div class="w-340">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name">
+                            <div class="input__button">
+                                <input id="PersonalEndlastnameId" type="text" class="input__text" placeholder="Last Name" name="endlastname"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input--datepicker w-134">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Date">
+                            <div class="input__button">
+                                <input id="PersonalDateId" type="text" class="input__text datepicker-here" placeholder="Date"
+                                       name="datetimesign"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-69">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Initials">
+                            <div class="input__button">
+                                <input id="PersonalInitialId" type="text" class="input__text" placeholder="Initials" name="endinitials"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" style="display: none;">
+                    <div class="w-340">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Last Name of Co-Applicant">
+                            <div class="input__button">
+                                <input id="CoAppEndlastnameofcoapplicantId" type="text" class="input__text" placeholder="Last Name of Co-Applicant" name="endlastnameofcoapplicant"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 input--datepicker w-134">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Date">
+                            <div class="input__button">
+                                <input id="CoAppDateId" type="text" class="input__text datepicker-here" placeholder="Date"
+                                       name="datetimesign1"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ml-16 w-69">
+                        <div class="input form-check__field form-check__field-point" data-check-type="input"
+                             data-check="input-required"
+                             data-placeholder="Initials">
+                            <div class="input__button">
+                                <input id="CoAppInitialId" type="text" class="input__text" placeholder="Initials" name="endappinitials"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="form-row">
+                    <div class="popup--border">
+                        <h5>Terms and Conditions</h5>
+                        <p>
+                            APPLICATION DISCLOSURE AND AGREEMENT
+                            You understand and agree that you are applying for credit by providing the information to complete and
+                            submit this credit application. We may keep this application and any other application submitted to us
+                            and information about you whether or not the application is approved. You certify that the information
+                            on the application and in any other application submitted to us, is true and complete. You understand
+                            that false statements may subject you to criminal penalties.
+                            The words “you”, “your” and “yours” mean each person submitting this application. The words “we”,
+                            “us”, “our” and “ours” as used below refer to us, the dealer, and to the financial institution(s) selected
+                            to receive your application.
+                            You authorize us to submit this application and any other application submitted in connection with the
+                            proposed transaction to the financial institutions disclosed to you by us the dealers. This application will
+                            be reviewed by such financial institutions on behalf of themselves and us the dealer. In addition, in
+                            accordance with the Fair Credit Reporting Act, you authorize that such financial institutions may submit
+                            your applications to other financial institutions for the purpose of fulfilling your request to apply for
+                            credit.
+                            You agree that we may obtain a consumer credit report periodically from one or more consumer
+                            reporting agencies (credit bureaus) in connection with the proposed transaction and any update,
+                            renewal, refinancing, modification or extension of that transaction. You also agree that we or any
+                            affiliate of ours may obtain one or more consumer credit reports on you at any time whatsoever. If you
+                            ask, you will be told whether a credit report was requested, and if so, the name and address of any
+                            credit bureau from which we or our affiliate obtained your credit report.
+                            You agree that we may verify your employment, pay, assets and debts, and that anyone receiving a copy
+                            of this is authorized to provide us with such information. You further authorize us to gather whatever
+                            credit and employment history we consider necessary and appropriate in evaluating this application and
+                            any other applications submitted in connection with the proposed transaction. You understand that we
+                            will rely on the information in this credit application in making our decision.
+                            FEDERAL NOTICES
+                            IMPORTANT INFORMATION ABOUT PROCEDURES FOR OPENING A NEW ACCOUNT
+                            If applicable to your credit transaction, to help the government fight the funding of terrorism and money
+                            laundering activities, Federal law requires financial institutions to obtain, verify, and record information
+                            that identifies each person who opens an account. What this means for you: When you open an
+                            account, you will be asked for your name, address, date of birth, and other information to identify you.
+                            You may also be asked to see your driver's license or other identifying documents.
+                            STATE NOTICES
+                            California Residents: An applicant, if married, may apply for a separate account.
+                            Maine and Tennessee Residents: You must have physical damage insurance covering loss or damage to
+                            the vehicle for the term of the contract. For a lease, you must also have the liability insurance as
+                            described in the lease. You may purchase required insurance through any insurance agent or broker and
+                            from any insurance company that is reasonably acceptable to us. You are not required to deal with any
+                            of our affiliates when choosing an agent, broker or insurer. Your choice of a particular insurance agent,
+                            broker or insurer will not affect our credit decision, so long as the insurance provides adequate coverage
+                            with an insurer who meets our reasonable requirements.
+                            New Hampshire Residents: If you are applying for a balloon payment contract, you are entitled, if you
+                            ask, to receive a written estimate of the monthly payment amount for refinancing the balloon payment
+                            in accord with the creditor’s existing refinance programs. You would be entitled to receive the estimate
+                            before you enter into a balloon payment contract. A balloon contract is an installment sales contract
+                            with a final scheduled payment that is at least twice the amount of one of the earlier scheduled equal
+                            periodic installment payments.
+                            New York Residents: In connection with your application for credit, a consumer report may be obtained
+                            from a consumer reporting agency (credit bureau). If credit is extended, the party or parties extending
+                            credit or holding such credit may order additional consumer reports in connection with any update,
+                            renewal or extension of the credit. If you ask, you will be told whether a consumer report was requested
+                            and, if so, the name and address of any consumer reporting agency (credit bureau) from which such
+                            credit report was obtained.
+                            Ohio Residents: Ohio laws against discrimination require that all creditors make credit equally available
+                            to all creditworthy customers and that credit reporting agencies maintain separate credit histories on
+                            each individual upon request. The Ohio Civil Rights Commission administers compliance with this law.
+                            Rhode Island Residents: Consumer reports may be requested in connection with this application. Buyer
+                            has the right of free choice in selecting an insurer to provide insurance required in connection with this
+                            transaction subject to our reasonable approval in accordance with applicable law.
+                            Vermont Residents: You authorize us and any financial institution with which this credit application is
+                            shared, and each of their respective employees or agents, to obtain and verify information about you
+                            (including one or more credit reports, information about your employment and banking and credit
+                            relationships) that they may deem necessary or appropriate in evaluating your credit application. If your
+                            credit application is approved and credit is granted, you also authorize the parties granting credit or
+                            holding your account, and their respective employees and agents, to obtain additional credit reports and
+                            other information about you in connection with reviewing the account, increasing the available credit on
+                            the account (if applicable), taking collection on the account, or for any other legitimate purpose.
+                            Married Wisconsin Residents: No provision of any marital property agreement, any unilateral statement
+                            under Wis. Stat § 766.59 or any court decree under § 766.70 applied to marital property adversely
+                            affects our interest unless you furnish a copy of the agreement, statement, or court decree or we have
+                            actual knowledge of such adverse provision before credit is granted. If you are making this credit
+                            application individually and not jointly with your spouse, complete Section A about yourself and Section
+                            B about your non-applicant spouse. Your non-applicant spouse should not sign the credit application if
+                            you are applying for individual credit.
+                        </p>
+                    </div>
+                </div>
+                <!-- <label class="popup--label"><input type="checkbox" name="iagree" placeholder="iagree">-->
+                <!-- I agree to the terms and conditions of service</label>-->
+                <div class="form-row">
+                    <div class="checkbox form-check__field form-check__field-point" data-check-type="input"
+                         data-check="checkbox-required">
+                        <div class="checkbox__item">
+                            <input id="checkbox_1" class="checkbox__item-input" name="iagree" value="true"
+                                   type="checkbox"/>
+                            <label class="checkbox__item-label" for="checkbox_1">I agree to the terms and conditions of
+                                service</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="popup--wrapper">
+                    <canvas id="signature-pad" class="signature-pad signature-pad--personal" width="568"
+                            height="103"></canvas>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button id="personal-submit" onclick="SaveApplication()" class="form-check__button popup__btn businessStep--next" type="submit" >
+                    Submit
+                </button>
+                <button class="popup__btn businessStep--prev" type="button">Back</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+<script type="text/javascript">
+
+    Visualforce.remoting.timeout = 120000; // Set timeout at page level
+
+    function SaveApplication(){
+        
+        console.log('___!!!1__ ' + document.getElementById("PersonalLastNameId").value);
+        console.log('___!!!2__ ' + document.getElementById("PersonalMiddleNameId").value);
+        console.log('___!!!3__ ' + document.getElementById("PersonalFirstNameId").value);
+        console.log('___!!!4__ ' + document.getElementById("PersonalBirthdayId").value);
+        console.log('___!!!5__ ' + document.getElementById("PersonalSSNId").value);
+        console.log('___!!!6__ ' + document.getElementById("PersonalZipId").value);
+        console.log('___!!!7__ ' + document.getElementById("PersonalAddressId").value);
+        console.log('___!!!8__ ' + document.getElementById("PersonalAptsuiteId").value);
+        console.log('___!!!9__ ' + document.getElementById("PersonalCityId").value);
+        console.log('___!!!10__ ' + document.getElementById("PersonalStateId").value);
+        console.log('___!!!11__ ' + document.getElementById("PersonalHomePhoneId").value);
+        console.log('___!!!12__ ' + document.getElementById("PersonalCellPhoneId").value);
+        console.log('___!!!13__ ' + document.getElementById("PersonalTypeOfResidenceId").value);
+        console.log('___!!!14__ ' + document.getElementById("PersonalYearsAtAddressId").value);
+        console.log('___!!!15__ ' + document.getElementById("PersonalMonthlyPaymentId").value);
+        console.log('___!!!16__ ' + document.getElementById("PersonalDateId").value);
+        console.log('___!!!17__ ' + document.getElementById("PersonalInitialId").value);
+        console.log('___!!!18__ ' + document.getElementById("PersonalPreviousAddressId").value);
+        console.log('___!!!19__ ' + document.getElementById("PersonalPreviousAptSuiteId").value);
+        console.log('___!!!20__ ' + document.getElementById("PersonalPreviousZipId").value);
+        console.log('___!!!21__ ' + document.getElementById("PersonalPreviousStateId").value);
+        console.log('___!!!22__ ' + document.getElementById("PersonalPreviousCityId").value);
+        console.log('___!!!23__ ' + document.getElementById("PersonalPreviousYearsAtAddressId").value);
+        console.log('___!!!24__ ' + document.getElementById("EmployerNameId").value);
+        console.log('___!!!25__ ' + document.getElementById("EmployerPhoneId").value);
+        console.log('___!!!26__ ' + document.getElementById("BusinessAddressId").value);
+        console.log('___!!!27__ ' + document.getElementById("EmployerSuiteId").value);
+        console.log('___!!!28__ ' + document.getElementById("EmployerZipId").value);
+        console.log('___!!!29__ ' + document.getElementById("EmployerStateId").value);
+        console.log('___!!!30__ ' + document.getElementById("EmployerCityId").value);
+        console.log('___!!!31__ ' + document.getElementById("EmployerYearsAtAddressId").value);
+        console.log('___!!!32__ ' + document.getElementById("EmployerPositionId").value);
+        console.log('___!!!33__ ' + document.getElementById("EmployerGrossAnnualIncomeId").value);
+        console.log('___!!!34__ ' + document.getElementById("EmployerOtherIncomeId").value);
+        console.log('___!!!35__ ' + document.getElementById("EmployerSourceOfOtherIncomeId").value);
+        console.log('___!!!36__ ' + document.getElementById("PreviousEmployerNameId").value);
+        console.log('___!!!37__ ' + document.getElementById("PreviousEmployerPhoneId").value);
+        console.log('___!!!38__ ' + document.getElementById("PreviousEmployerBusinessAddressId").value);
+        console.log('___!!!39__ ' + document.getElementById("PreviousEmployerSuiteId").value);
+        console.log('___!!!40__ ' + document.getElementById("PreviousEmployerZipId").value);
+        console.log('___!!!41__ ' + document.getElementById("PreviousEmployerStateId").value);
+        console.log('___!!!42__ ' + document.getElementById("PreviousEmployerCityId").value);
+        console.log('___!!!43__ ' + document.getElementById("PreviousEmployerYearsAtAddressId").value);
+        console.log('___!!!44__ ' + document.getElementById("withcoappId").value);
+        console.log('___!!!45__ ' + document.getElementById("CoAppLastNameId").value);
+        console.log('___!!!46__ ' + document.getElementById("CoAppMiddleNameId").value);
+        console.log('___!!!47__ ' + document.getElementById("CoAppFirstNameId").value);
+        console.log('___!!!48__ ' + document.getElementById("CoAppBirthdayId").value);
+        console.log('___!!!49__ ' + document.getElementById("CoAppSSNId").value);
+        console.log('___!!!50__ ' + document.getElementById("CoAppZipId").value);
+        console.log('___!!!51__ ' + document.getElementById("CoAppAddressId").value);
+        console.log('___!!!52__ ' + document.getElementById("CoAppAptSuiteId").value);
+        console.log('___!!!53__ ' + document.getElementById("CoAppCityId").value);
+        console.log('___!!!54__ ' + document.getElementById("CoAppStateId").value);
+        console.log('___!!!55__ ' + document.getElementById("CoAppHomePhoneId").value);
+        console.log('___!!!56__ ' + document.getElementById("CoAppCellPhoneId").value);
+        console.log('___!!!57__ ' + document.getElementById("CoAppTypeOfResidenceId").value);
+        console.log('___!!!58__ ' + document.getElementById("CoAppYearsAtAddressId").value);
+        console.log('___!!!59__ ' + document.getElementById("CoAppMonthlyPaymentId").value);
+        console.log('___!!!60__ ' + document.getElementById("CoAppDateId").value);
+        console.log('___!!!61__ ' + document.getElementById("CoAppInitialId").value);
+        console.log('___!!!62__ ' + document.getElementById("CoAppPreviousAddressId").value);
+        console.log('___!!!63__ ' + document.getElementById("CoAppPreviousAptSuiteId").value);
+        console.log('___!!!64__ ' + document.getElementById("CoAppPreviousZipId").value);
+        console.log('___!!!65__ ' + document.getElementById("CoAppPreviousStateId").value);
+        console.log('___!!!66__ ' + document.getElementById("CoAppPreviousCityId").value);
+        console.log('___!!!67__ ' + document.getElementById("CoAppPreviousYearsAtAddressId").value);
+        console.log('___!!!68__ ' + document.getElementById("CoEmploymentEmployerNameId").value);
+        console.log('___!!!69__ ' + document.getElementById("CoEmploymentPhoneId").value);
+        console.log('___!!!70__ ' + document.getElementById("CoEmploymentBusinessAddressId").value);
+        console.log('___!!!71__ ' + document.getElementById("CoEmploymentSuiteId").value);
+        console.log('___!!!72__ ' + document.getElementById("CoEmploymentZipId").value);
+        console.log('___!!!73__ ' + document.getElementById("CoEmploymentStateId").value);
+        console.log('___!!!74__ ' + document.getElementById("CoEmploymentCityId").value);
+        console.log('___!!!75__ ' + document.getElementById("CoEmploymentYearsAtAddressId").value);
+        console.log('___!!!76__ ' + document.getElementById("CoEmploymentPositionId").value);
+        console.log('___!!!77__ ' + document.getElementById("CoEmploymentGrossAnnualIncomeId").value);
+        console.log('___!!!78__ ' + document.getElementById("CoEmploymentOtherIncomeId").value);
+        console.log('___!!!79__ ' + document.getElementById("CoEmploymentSourceOfOtherIncomeId").value);
+        console.log('___!!!80__ ' + document.getElementById("CoEmploymentPreviousEmployerNameId").value);
+        console.log('___!!!81__ ' + document.getElementById("CoEmploymentPreviousPhoneId").value);
+        console.log('___!!!82__ ' + document.getElementById("CoEmploymentPreviousBusinessAddressId").value);
+        console.log('___!!!83__ ' + document.getElementById("CoEmploymentPreviousSuiteId").value);
+        console.log('___!!!84__ ' + document.getElementById("CoEmploymentPreviousZipId").value);
+        console.log('___!!!85__ ' + document.getElementById("CoEmploymentPreviousStateId").value);
+        console.log('___!!!86__ ' + document.getElementById("CoEmploymentPreviousCityId").value);
+        console.log('___!!!87__ ' + document.getElementById("CoEmploymentPreviousYearsAtAddressId").value);
+        console.log('___!!!88__ ' + document.getElementById("checkbox_1").value);
+        
+        var appFormData = {
+            
+            RecordType: document.getElementById("personal-info").value,
+            PersonalLastName: document.getElementById("PersonalLastNameId").value, 
+            PersonalMiddleName: document.getElementById("PersonalMiddleNameId").value,
+            PersonalFirstName: document.getElementById("PersonalFirstNameId").value,
+            PersonalBirthday: document.getElementById("PersonalBirthdayId").value,
+            PersonalSSN: document.getElementById("PersonalSSNId").value,
+            PersonalZip: document.getElementById("PersonalZipId").value,
+            PersonalAddress: document.getElementById("PersonalAddressId").value,
+            PersonalAptsuite: document.getElementById("PersonalAptsuiteId").value,
+            PersonalCity: document.getElementById("PersonalCityId").value,
+            PersonalState: document.getElementById("PersonalStateId").value,
+            PersonalHomePhone: document.getElementById("PersonalHomePhoneId").value,
+            PersonalCellPhone: document.getElementById("PersonalCellPhoneId").value,
+            PersonalTypeOfResidence: document.getElementById("PersonalTypeOfResidenceId").value,
+            PersonalYearsAtAddress: document.getElementById("PersonalYearsAtAddressId").value,
+            PersonalMonthlyPayment: document.getElementById("PersonalMonthlyPaymentId").value,
+            PersonalDate: document.getElementById("PersonalDateId").value,
+            PersonalInitial: document.getElementById("PersonalInitialId").value, 
+            
+            PersonalPreviousAddress: document.getElementById("PersonalPreviousAddressId").value,
+            PersonalPreviousAptSuite: document.getElementById("PersonalPreviousAptSuiteId").value,
+            PersonalPreviousZip: document.getElementById("PersonalPreviousZipId").value,
+            PersonalPreviousState: document.getElementById("PersonalPreviousStateId").value,
+            PersonalPreviousCity: document.getElementById("PersonalPreviousCityId").value,
+            PersonalPreviousYearsAtAddress: document.getElementById("PersonalPreviousYearsAtAddressId").value,
+            
+            EmployerName: document.getElementById("EmployerNameId").value,
+            EmployerPhone: document.getElementById("EmployerPhoneId").value,
+            BusinessAddress: document.getElementById("BusinessAddressId").value,
+            EmployerSuite: document.getElementById("EmployerSuiteId").value,
+            EmployerZip: document.getElementById("EmployerZipId").value,
+            EmployerState: document.getElementById("EmployerStateId").value,
+            EmployerCity: document.getElementById("EmployerCityId").value,
+            EmployerYearsAtAddress: document.getElementById("EmployerYearsAtAddressId").value,
+            EmployerPosition: document.getElementById("EmployerPositionId").value,
+            EmployerGrossAnnualIncome: document.getElementById("EmployerGrossAnnualIncomeId").value,
+            EmployerOtherIncome: document.getElementById("EmployerOtherIncomeId").value,
+            EmployerSourceOfOtherIncome: document.getElementById("EmployerSourceOfOtherIncomeId").value,
+            
+            PreviousEmployerName: document.getElementById("PreviousEmployerNameId").value,
+            PreviousEmployerPhone: document.getElementById("PreviousEmployerPhoneId").value,
+            PreviousEmployerBusinessAddress: document.getElementById("PreviousEmployerBusinessAddressId").value,
+            PreviousEmployerSuite: document.getElementById("PreviousEmployerSuiteId").value,
+            PreviousEmployerZip: document.getElementById("PreviousEmployerZipId").value,
+            PreviousEmployerState: document.getElementById("PreviousEmployerStateId").value,
+            PreviousEmployerCity: document.getElementById("PreviousEmployerCityId").value,
+            PreviousEmployerYearsAtAddress: document.getElementById("PreviousEmployerYearsAtAddressId").value,
+            
+            AddACoApplicant: document.getElementById("withcoappId").value,
+            
+            CoAppLastName: document.getElementById("CoAppLastNameId").value,
+            CoAppMiddleName: document.getElementById("CoAppMiddleNameId").value,
+            CoAppFirstName: document.getElementById("CoAppFirstNameId").value,
+            CoAppBirthday: document.getElementById("CoAppBirthdayId").value,
+            CoAppSSN: document.getElementById("CoAppSSNId").value,
+            CoAppZip: document.getElementById("CoAppZipId").value,
+            CoAppAddress: document.getElementById("CoAppAddressId").value,
+            CoAppAptSuite: document.getElementById("CoAppAptSuiteId").value,
+            CoAppCity: document.getElementById("CoAppCityId").value,
+            CoAppState: document.getElementById("CoAppStateId").value,
+            CoAppHomePhone: document.getElementById("CoAppHomePhoneId").value,
+            CoAppCellPhone: document.getElementById("CoAppCellPhoneId").value,
+            CoAppTypeOfResidence: document.getElementById("CoAppTypeOfResidenceId").value,
+            CoAppYearsAtAddress: document.getElementById("CoAppYearsAtAddressId").value,
+            CoAppMonthlyPayment: document.getElementById("CoAppMonthlyPaymentId").value,
+            CoAppDate: document.getElementById("CoAppDateId").value,
+            CoAppInitial: document.getElementById("CoAppInitialId").value,
+            
+            CoAppPreviousAddress: document.getElementById("CoAppPreviousAddressId").value,
+            CoAppPreviousAptSuite: document.getElementById("CoAppPreviousAptSuiteId").value,
+            CoAppPreviousZip: document.getElementById("CoAppPreviousZipId").value,
+            CoAppPreviousState: document.getElementById("CoAppPreviousStateId").value,
+            CoAppPreviousCity: document.getElementById("CoAppPreviousCityId").value,
+            CoAppPreviousYearsAtAddress: document.getElementById("CoAppPreviousYearsAtAddressId").value,
+            
+            CoEmploymentEmployerName: document.getElementById("CoEmploymentEmployerNameId").value,
+            CoEmploymentPhone: document.getElementById("CoEmploymentPhoneId").value,
+            CoEmploymentBusinessAddress: document.getElementById("CoEmploymentBusinessAddressId").value,
+            CoEmploymentSuite: document.getElementById("CoEmploymentSuiteId").value,
+            CoEmploymentZip: document.getElementById("CoEmploymentZipId").value,
+            CoEmploymentState: document.getElementById("CoEmploymentStateId").value,
+            CoEmploymentCity: document.getElementById("CoEmploymentCityId").value,
+            CoEmploymentYearsAtAddress: document.getElementById("CoEmploymentYearsAtAddressId").value,
+            CoEmploymentPosition: document.getElementById("CoEmploymentPositionId").value,
+            CoEmploymentGrossAnnualIncome: document.getElementById("CoEmploymentGrossAnnualIncomeId").value,
+            CoEmploymentOtherIncome: document.getElementById("CoEmploymentOtherIncomeId").value,
+            CoEmploymentSourceOfOtherIncome: document.getElementById("CoEmploymentSourceOfOtherIncomeId").value,
+            
+            CoEmploymentPreviousEmployerName: document.getElementById("CoEmploymentPreviousEmployerNameId").value,
+            CoEmploymentPreviousPhone: document.getElementById("CoEmploymentPreviousPhoneId").value,
+            CoEmploymentPreviousBusinessAddress: document.getElementById("CoEmploymentPreviousBusinessAddressId").value,
+            CoEmploymentPreviousSuite: document.getElementById("CoEmploymentPreviousSuiteId").value,
+            CoEmploymentPreviousZip: document.getElementById("CoEmploymentPreviousZipId").value,
+            CoEmploymentPreviousState: document.getElementById("CoEmploymentPreviousStateId").value,
+            CoEmploymentPreviousCity: document.getElementById("CoEmploymentPreviousCityId").value,
+            CoEmploymentPreviousYearsAtAddress: document.getElementById("CoEmploymentPreviousYearsAtAddressId").value,
+            
+            //PersIAgreeToTheTermsAndConditions: document.getElementById("PersIAgreeToTheTermsAndConditionsId").value 
+            PersIAgreeToTheTermsAndConditions: document.getElementById("checkbox_1").value 
+        };    
+        
+        var appFormDataJsonStr = JSON.stringify(appFormData); 
+        console.log('appFormDataJsonStr___: ' + appFormDataJsonStr );
+        
+        Visualforce.remoting.Manager.invokeAction(
+
+            '{!$RemoteAction.CreditApplicationCtrl.SaveCreditApplication}',
+
+            appFormDataJsonStr, 
+
+            function(result, event){
+                console.log('Save-Result_Succes: ' + event.status == true);
+                if (event.status == true) {
+                    console.log('Save-Result_Succes: ' + event.status);
+                    document.getElementById('hide').style.display = "none";
+                    document.getElementById('display').style.display = "block";
+                    
+                    // Get DOM IDs for HTML and Visualforce elements like this
+                    //document.getElementById('remoteAcctId').innerHTML = result.Id
+                    //document.getElementById(
+                    //    "{!$Component.block.blockSection.secondItem.acctNumEmployees}"
+                    //    ).innerHTML = result.NumberOfEmployees;
+                } else if (event.type === 'exception') {
+                    //document.getElementById("responseErrors").innerHTML = 
+                    //    event.message + "<br/>\n<pre>" + event.where + "</pre>";
+                    
+                    console.log('Save-Result_exception: ' + event.message);
+                } else {
+                    //document.getElementById("responseErrors").innerHTML = event.message;
+                    console.log('Save-Result_exception:: ' + event.message);
+                    
+                    document.getElementById('hide').style.display = "none";
+                    document.getElementById('display').style.display = "block";
+                }
+            }, 
+            {escape: true}
+        );
+    }  
+</script>
+
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'jquery-3.3.1.js')}"/>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'datepicker.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'baron.js')}"/>
+
+<script>
+    var canvas = document.getElementById('signature-pad');
+    var canvas2 = document.getElementById('signature-pad2');
+
+    // Adjust canvas coordinate space taking into account pixel ratio,
+    // to make it look crisp on mobile devices.
+    // This also causes canvas to be cleared.
+    function resizeCanvas() {
+        // When zoomed out to less than 100%, for some very strange reason,
+        // some browsers report devicePixelRatio as less than 1
+        // and only part of the canvas is cleared then.
+        var ratio = Math.max(window.devicePixelRatio || 1, 1);
+        // canvas.width = canvas.offsetWidth * ratio;
+        // canvas.height = canvas.offsetHeight * ratio;
+        // canvas.getContext("2d").scale(ratio, ratio);
+    }
+
+    window.onresize = resizeCanvas;
+    resizeCanvas();
+
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(255, 255, 255)' // necessary for saving image as JPEG; can be removed is only saving as PNG or SVG
+    });
+
+    var signaturePad2 = new SignaturePad(canvas2, {
+        backgroundColor: 'rgb(255, 255, 255)' // necessary for saving image as JPEG; can be removed is only saving as PNG or SVG
+    });
+</script>
+
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'script.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'inputs_script.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.GTAutoLab, 'jquery.mask.js')}"/>
+<script src="//unpkg.com/autonumeric"></script>
+
+<script>
+    var Overlay = document.querySelector(".popup-overlay");
+    var valueBTN = document.querySelectorAll(".block-sellcar__btn");
+    var valuePopup = document.querySelector(".value-popup");
+    //var valueClose = valuePopup.querySelector(".modal-close");
+    if (valueBTN && valuePopup) {
+        for (var i = 0; i < valueBTN.length; i++) {
+            valueBTN[i].addEventListener("click", function (evt) {
+                evt.preventDefault();
+                valuePopup.classList.add("popup__show");
+                Overlay.classList.add("popup-overlay__show");
+            });
+        }
+
+        //valueClose.addEventListener("click", function (evt) {
+        //    evt.preventDefault();
+        //    valuePopup.classList.remove("popup__show");
+        //    Overlay.classList.remove("popup-overlay__show");
+        // });
+
+        Overlay.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            valuePopup.classList.remove("popup__show");
+            Overlay.classList.remove("popup-overlay__show");
+        });
+    }
+</script>
+
+<script>
+    $("input[name*='phone']").each(function (i, el) {
+        $(el).mask('(000) 000-0000');
+    });
+    $('.datepicker-here').each(function (i, el) {
+        $(el).mask('00/00/0000');
+    });
+    $("input.ssn").each(function (i, el) {
+        $(el).mask('000-00-0000');
+    });
+    $(".popup-personal input[name*='payment'], input.income, .popup-personal input[name*='income']").each(function (i, el) {
+        var name = $(el).attr('name');
+        if (name.indexOf('source') === -1) {
+            new AutoNumeric(el, {
+                // new AutoNumeric('input[name*=' + name + ']', {
+                dotDecimalCharCommaSeparator: ',',
+                integerPos: 7,
+                integerNeg: 1,
+                currencySymbol: '$',
+                negativePositiveSignPlacement: 's'
+            });
+        }
+    });
+</script>
+
+<script>
+    $('.select-selected').each(function (i, el) {
+
+        el.addEventListener("focusout", function () {
+            // $(this).removeClass('select-arrow-active');
+            // $(this).next('.select-items').addClass('select-hide');
+            console.log($(this).text());
+        });
+
+        el.addEventListener("input", function () {
+            var entryCounts = [],
+                ths = $(this);
+
+            if (!ths.hasClass('select-arrow-active')) {
+                ths.addClass('select-arrow-active');
+                ths.parent().find('.select-items').removeClass('select-hide');
+            }
+
+            if (ths.text().length > 0 && ths.text() !== ths.parent().find('select').attr('placeholder')) {
+                ths.parent().find('.select-items div').each(function (q, opt) {
+                    var optionText = $(opt).text().toUpperCase(),
+                        // searchString = $(el).text(),
+                        searchString = $(el).text().toUpperCase();
+                    if (optionText.indexOf(searchString) === -1) {
+                        $(opt).hide();
+                        $(opt).removeClass('same-as-selected');
+                    } else {
+                        console.log(entryCounts);
+                        entryCounts.push($(opt).text());
+                        $(opt).show();
+                        $(opt).addClass('same-as-selected');
+                    }
+                });
+                if (entryCounts.length === 1) {
+                    ths.parent().find('.select-items').addClass('select-hide');
+                    ths.text(entryCounts[0]);
+                }
+            } else {
+                $(this).parent().find('.select-items').each(function (q, opt) {
+                    $(opt).show();
+                });
+            }
+        }, false);
+    });
+</script>
+</body>
+</html>
+</apex:page>

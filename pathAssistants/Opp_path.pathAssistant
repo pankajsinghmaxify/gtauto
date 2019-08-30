@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Opp path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Amount</fieldNames>
+        <fieldNames>Balance_Points__c</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>Bank_Submission__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Qualify the opportunity and confirm budget.&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;What&amp;#39;s their business?&lt;/li&gt;&lt;li&gt;What problems are they trying to solve?&lt;/li&gt;&lt;li&gt;How does solving these problems help them?&lt;/li&gt;&lt;li&gt;Is the timing good for them?&lt;/li&gt;&lt;li&gt;What&amp;#39;s their budget?&lt;/li&gt;&lt;li&gt;What other solutions are they considering?&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Quote-Analysis</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Opportunity</recordTypeName>
+</PathAssistant>

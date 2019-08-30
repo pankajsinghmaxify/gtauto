@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_to_mgr_and_sales_rep_after_5_day_lead_creation</fullName>
+        <ccEmails>pankaj.singh@maxify.digital</ccEmails>
+        <description>Email to mgr and sales rep after 5 day lead creation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>deepankurchawla@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Lead_FollowUp</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_Rating</fullName>
+        <field>Rating</field>
+        <literalValue>Cold</literalValue>
+        <name>Update Rating</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Rating_21_50</fullName>
+        <field>Rating</field>
+        <literalValue>Warm</literalValue>
+        <name>Update Rating 21-50</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Rating_51_80</fullName>
+        <field>Rating</field>
+        <literalValue>Hot</literalValue>
+        <name>Update Rating 51-80</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Rating_80_100</fullName>
+        <field>Rating</field>
+        <literalValue>Important</literalValue>
+        <name>Update Rating 80-100</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Lead FollowUp</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_to_mgr_and_sales_rep_after_5_day_lead_creation</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Lead.CreatedDate</offsetFromField>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Update Rating 0-20</fullName>
+        <actions>
+            <name>Update_Rating</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Lead_Score__c</field>
+            <operation>lessOrEqual</operation>
+            <value>20</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Rating 21-50</fullName>
+        <actions>
+            <name>Update_Rating_21_50</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Lead_Score__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>21</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Score__c</field>
+            <operation>lessOrEqual</operation>
+            <value>50</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Rating 51-80</fullName>
+        <actions>
+            <name>Update_Rating_51_80</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Lead_Score__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>51</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Score__c</field>
+            <operation>lessOrEqual</operation>
+            <value>80</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Rating 81-100</fullName>
+        <actions>
+            <name>Update_Rating_80_100</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Lead_Score__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>81</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

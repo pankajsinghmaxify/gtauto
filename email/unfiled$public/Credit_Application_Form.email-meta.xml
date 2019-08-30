@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>GT Auto- Fill Credit application form.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Credit Application Form</name>
+    <style>none</style>
+    <subject>GT Auto credit form.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

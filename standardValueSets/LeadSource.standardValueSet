@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>WordofMouth</fullName>
+        <default>false</default>
+        <label>Word of Mouth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Warmcalls</fullName>
+        <default>false</default>
+        <label>Warm calls (info from dealerships)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Socialmediaadvertising</fullName>
+        <default>false</default>
+        <label>Social media advertising</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Walk-in</fullName>
+        <default>false</default>
+        <label>Walk-in</label>
+    </standardValue>
+</StandardValueSet>
